@@ -1,4 +1,4 @@
-let babyName = document.getElementById("name");
+let content = document.getElementById("content");
 
 const options = {
   method: "GET",
@@ -13,5 +13,12 @@ const getData = async () => {
     options
   );
   const data = await response.json();
-  babyName.innerText = data[0];
+  content.innerHTML =
+    '<ul class = "my-3 list list-group list-group-flush">' +
+    data
+      .map(function (name) {
+        return "<li>" + "<h5>" + name + "</h5>" + "</li>";
+      })
+      .join("") +
+    "</ul>";
 };

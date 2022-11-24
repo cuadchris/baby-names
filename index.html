@@ -16,17 +16,19 @@
       * {
         font-family: Georgia, "Times New Roman", Times, serif;
       }
+
+      .list {
+        list-style-type: none;
+      }
     </style>
   </head>
   <body style="background-color: rgb(206, 128, 206)">
-    <div class="container text-center">
-      <button onclick="getData()" class="btn btn-danger btn-lg mx-auto mt-5">
-        Get Girl Name
+    <div class="container text-center my-5">
+      <button onclick="getData()" class="btn btn-danger btn-lg mt-5">
+        Generate Girl Names
       </button>
     </div>
-    <div class="container text-center content">
-      <h1 id="name" class="my-5"></h1>
-    </div>
+    <div id="content" class="container text-center"></div>
     <script src="main.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script
